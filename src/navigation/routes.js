@@ -15,8 +15,9 @@ import { Text, View
 } from 'react-native';
 //components list
 // import Loginsignup  from '../components/Login/LoginSignUp'
-// import Splash from '../screens/splash/Splash';
+import Splash from '../screens/splash/Splash';
 import Login from "../components/Login/Login"
+import Signup from "../components/Login/Signup"
 
 // import Tab, { TabTop } from "./Tab"
 
@@ -78,8 +79,18 @@ class StackNav extends Component {
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}>
         <Stack.Screen
+          name={Routeskey.SPLASH}
+          component={Splash}
+          options={{ headerShown: false, gesturesEnabled: false, }}
+        />
+        <Stack.Screen
           name={Routeskey.LOGIN}
           component={Login}
+          options={{ headerShown: false, gesturesEnabled: false, }}
+        />
+        <Stack.Screen
+          name={Routeskey.SIGNUP}
+          component={Signup}
           options={{ headerShown: false, gesturesEnabled: false, }}
         />
         <Stack.Screen

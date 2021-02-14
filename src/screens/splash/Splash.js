@@ -23,7 +23,7 @@ export default class Splash extends Component {
       <ImageBackground
         style={{ flex: 1 }}
         // resizeMode="cover"
-        source={require('../../assets/images/pack.jpg')}
+        source={require('../../assets/images/bg.jpg')}
       >
 
 
@@ -38,7 +38,7 @@ export default class Splash extends Component {
           <Animatable.Image
             duration={600}
             animation="lightSpeedIn"
-            source={require('../../assets/images/exchaneg.png')}
+            source={require('../../assets/images/logo.png')}
             style={{
               width: imageWidth,
               height: 150,
@@ -49,7 +49,7 @@ export default class Splash extends Component {
           />
           <Animatable.Text animation="pulse"
             style={{ fontSize: 30, color: "#575757", fontWeight: "bold" }}
-            iterationCount={5} direction="alternate">UI - TRADE</Animatable.Text>
+            iterationCount={5} direction="alternate">PRD DRIVER</Animatable.Text>
         </View>
       </ImageBackground>
     );

@@ -9,7 +9,7 @@ import Toast from 'react-native-simple-toast';
 import Routeskey from "../../navigation/routeskey"
 import styles from './LoginStyle';
 import {responsiveHeight,responsiveWidth} from "react-native-responsive-dimensions";
-export default  Login   = props => {
+export default  Signup   = props => {
     const [showPassword, setshowPassword] = useState(true);
     const [loginPressed, setloginPressed] = useState(false);
     const [userEmail, setuserEmail] = useState('');
@@ -53,7 +53,7 @@ export default  Login   = props => {
 
                 <View style={styles.footerView} />
                 <View style={styles.cardView}>
-                    <Text style={styles.logintext}>Login</Text>
+                    <Text style={styles.logintext}>Signup</Text>
                     <View style={styles.inputView}>
                         <FontAwesome name='user' size={20} color={Colors.cyanBlue} />
                         <TextInput
@@ -87,16 +87,33 @@ export default  Login   = props => {
 
 
                     </View>
-           
+                    <View style={styles.pickerView} >
+                        <Picker
+                            selectedValue={selectedValue}
+                            style={{ height: responsiveHeight(5), width: responsiveWidth(70) }}
+                            onValueChange={(itemValue, itemIndex) => setselectedValue( itemValue )}
+                        >
+                            <Picker.Item label="#12323" value="" />
+                            <Picker.Item label="#1sse32" value="Customer" />
+                            <Picker.Item label="sdsd353" value="Admin" />
+                            <Picker.Item label="23d44dt" value="Dispenser" />
+                            <Picker.Item label="234dsf4" value="DeliveryBoy" />
+                        </Picker>
+                    </View>
                     <TouchableOpacity
                      onPress={() => props.navigation.navigate(Routeskey.DRAWER)}
                     // onPress={() => getUser()}
                      style={styles.loginButton}>
                         {loginPressed ? <ActivityIndicator size='small' color={Colors.extraDarkBlue} /> :
 
-                            <Text style={styles.buttonText}>Login Now</Text>}
+                            <Text style={styles.buttonText}>SignUp Now</Text>}
                     </TouchableOpacity>
-                   
+                    <View style={styles.signupView}>
+                        <Text>Don't have an Account ? </Text>
+                        <TouchableOpacity onPress={() => props.navigation.navigate(Routeskey.SIGNUP)}>
+                            <Text style={styles.signupText}> LOGIN</Text>
+                        </TouchableOpacity>
+                    </View>
 
                 </View>
             </SafeAreaView>
