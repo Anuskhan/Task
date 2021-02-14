@@ -1,6 +1,8 @@
 class RoutesKey {
   static SPLASH = 'splash';
-  static LOGIN = "login"
+  static LOGIN = "login";
+  static HOME = "HOME";
+  static DRAWER = "DRAWER";
 
 }
 

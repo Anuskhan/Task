@@ -11,28 +11,35 @@ import Routeskey from './routeskey';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationNativeContainer } from '@react-navigation/native';
 import DrawerContent from "./DrawerContent"
-
+import { Text, View
+} from 'react-native';
 //components list
 // import Loginsignup  from '../components/Login/LoginSignUp'
 // import Splash from '../screens/splash/Splash';
 import Login from "../components/Login/Login"
 
-import Tab, { TabTop } from "./Tab"
+// import Tab, { TabTop } from "./Tab"
 
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
+function Settings() {
+  return (
+      <View style={{backgroundColor:"blue",flex:1,alignContent:"center",justifyContent:"center",alignItems:"center"}}>
+          <Text>Settings</Text>
+      </View>
+  );
+}
 MyDrawer = () => {
   return (
-    <Drawer.Navigator initialRouteName={Routeskey.SUB} drawerContent={props => <DrawerContent {...props} />}>
-
+    <Drawer.Navigator initialRouteName={Routeskey.HOME}
+     drawerContent={props => <DrawerContent {...props} />}>
       <Drawer.Screen
-        name={Routeskey.SUB}
+        name={Routeskey.HOME}
         component={StackNavSub}
         options={{ headerShown: false }}
       />
-     
     </Drawer.Navigator>
 
   );
@@ -50,7 +57,7 @@ class StackNavSub extends Component {
         }}>
         <Stack.Screen
           name={Routeskey.HOME}
-          component={Tab}
+          component={Settings}
           options={{ headerShown: false }}
         />
        
@@ -89,10 +96,8 @@ class StackNav extends Component {
 
 export default Routes = () => {
   return (
-
     <>
       <StackNav />
-    
     </>
   )
 }
