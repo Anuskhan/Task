@@ -18,6 +18,7 @@ import { Text, View
 import Splash from '../screens/splash/Splash';
 import Login from "../components/Login/Login"
 import Signup from "../components/Login/Signup"
+import Home from "../components/Home/Home"
 
 // import Tab, { TabTop } from "./Tab"
 
@@ -58,7 +59,7 @@ class StackNavSub extends Component {
         }}>
         <Stack.Screen
           name={Routeskey.HOME}
-          component={Settings}
+          component={Home}
           options={{ headerShown: false }}
         />
        

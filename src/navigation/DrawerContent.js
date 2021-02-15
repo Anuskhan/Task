@@ -6,11 +6,12 @@ import {
     DrawerItemList,
     DrawerItem,
 } from '@react-navigation/drawer';
+import Colors from '../utils/colors'
 
 import Icon from 'react-native-vector-icons/dist/SimpleLineIcons';
 
 
-import { View, Image, StyleSheet, Text, Switch, TouchableOpacity, Dimensions } from "react-native"
+import { View, Image, StyleSheet,StatusBar, Text, Switch, TouchableOpacity, Dimensions } from "react-native"
 const height = Dimensions.get('window').height;
 import RoutesKey from './routeskey';
 import Global from "../utils/global"
@@ -41,17 +42,17 @@ class CustomDrawerContent extends Component {
 
         return (
             <DrawerContentScrollView {...this.props}>
-               
-                    <View style={{ height, flex: 1, padding: 10 }}>
+                <StatusBar barStyle='light-content' translucent backgroundColor='transparent' />
+                    <View style={{ height, flex: 1, padding: 10 ,backgroundColor:Colors.cyanBlue}}>
                         {/* <DrawerItemList {...props} /> */}
                         <View style={styles.MainContainer}>
                             <View style={styles.RoundImage}>
-                                <Image source={null}
+                                <Image source={require("../assets/images/ava.png")}
                                     style={{ width: 70, height: 70, borderRadius: 150 / 2 }} />
                             </View>
                             <View style={styles.NameAndRole}>
-                                <Text style={[styles.Namee, { color: "gray" }]}>{Name}</Text>
-                                <Text style={[styles.Rolee, { color: "gray" }]}>#{Id}</Text>
+                                <Text style={[styles.Namee, { color: "#fff" }]}>DRIVER</Text>
+                                <Text style={[styles.Rolee, { color: "#fff" }]}>#12213123</Text>
                             </View>
                         </View>
 
@@ -63,7 +64,7 @@ class CustomDrawerContent extends Component {
                                 <Icon size={20} style={{  textAlign: 'center',
         width: 25,
         height: 20,
-        resizeMode: 'contain',}} color="#fff" name="user" />
+      }} color="#fff" name="user" />
 
                                 <Text style={styles.LinkName}>Profile</Text>
                             </TouchableOpacity>
@@ -84,7 +85,7 @@ const styles = StyleSheet.create(
     {
         MainContainer:
         {
-            backgroundColor: "yellow",
+           
             flex: 0.1,
             flexDirection: "row",
             justifyContent: 'center',
@@ -98,10 +99,10 @@ const styles = StyleSheet.create(
 
         },
         RoundImage: {
-            backgroundColor: "pink"
+           
         },
         NameAndRole: {
-            backgroundColor: "#f2f2f2",
+           
             flex: 1,
             paddingHorizontal: 6
 
