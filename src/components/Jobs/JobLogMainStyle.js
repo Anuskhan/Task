@@ -12,6 +12,7 @@ export default styles = StyleSheet.create({
         backgroundColor: Colors.yellow,
 
     },
+    red:{color:Colors.red,fontWeight:'800'},
     headerView: {
         flex: 0.2,
         width: responsiveWidth(100),
@@ -52,28 +53,45 @@ listItem: {
     padding: 15,
     backgroundColor:Colors.white,
     borderBottomWidth: 1,
-    borderBottomColor: '#d3d3d3'
+    borderBottomColor: '#d3d3d3',
+    marginVertical:5,
 },
 listItemDetail: {
     flex: 1,
     justifyContent:"space-between"
 },
+Detail: {
+    flex: 1,margin:20,
+    padding:20,borderColor:Colors.black,borderWidth:2,
+},
 row:{
     flexDirection:"row"
+},
+r:{
+  flex:1,marginVertical:10,
+    flexDirection:"row"
+},
+rb:{
+  flex:1,marginVertical:10,alignItems:"center",justifyContent:"space-around",
+    flexDirection:"row",
 },
 load: {
     padding: 10
 },
 listItemText: {
-    fontWeight: "400",
-    fontSize: 18,
+    fontWeight: "800",
+    fontSize: 16,
     color: '#000'
 },
+dr:{color:Colors.red , fontWeight:"bold",flex:1,
+fontSize: 16,},
+d:{  fontWeight: "bold",
+fontSize: 16,},
 listItemSubText: {
-    flex: 1,
     fontSize: 14
 },
 icon: {
+    
     fontSize: 24
 },
 listItemDetailIconButton: {
@@ -88,7 +106,7 @@ listItemDetailIconButton: {
 },
 
 lis:{
-    
-    borderBottomLeftRadius: 25, paddingVertical: 10, alignItems: "center"
+    marginTop:25,
+     alignItems: "center"
 }
 })
