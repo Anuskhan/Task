@@ -6,6 +6,7 @@ class RoutesKey {
   static DRAWER = "DRAWER";
   static CHAT = "CHAT";
   static JOBMAINLOG = 'JOBMAINLOG';
+  static JOBAVALIABLE = 'JOBAVALIABLE';
 }
 
 export default RoutesKey;

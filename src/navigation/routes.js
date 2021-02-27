@@ -21,6 +21,7 @@ import Signup from "../components/Login/Signup"
 import Home from "../components/Home/Home"
 import Chat from "../components/Chat/Chat" 
 import JobLogMain from "../components/Jobs/JobLogMain" 
+import AvailableJob from "../components/Jobs/AvailableJob" 
 // import Tab, { TabTop } from "./Tab"
 
 
@@ -108,6 +109,11 @@ class StackNav extends Component {
         <Stack.Screen
           name={Routeskey.JOBMAINLOG}
           component={JobLogMain}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={Routeskey.JOBAVALIABLE}
+          component={AvailableJob}
           options={{ headerShown: false }}
         />
 

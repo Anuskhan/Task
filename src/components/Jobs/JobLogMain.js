@@ -38,35 +38,24 @@ export default class JobLogMain extends Component {
         return (
 
 
-            <View style={{ flex: 1 }}>
-                <SafeAreaView style={{ flex: 1 }}>
+            <View style={styles.f}>
+                <SafeAreaView style={styles.f}>
                     <View style={styles.headerView}>
 
                         <Text style={styles.h}>Jobs</Text>
                     </View>
-                    <View style={{ flex: 0.9, marginTop: -10, backgroundColor: "#fff", borderTopRightRadius: 10, borderTopLeftRadius: 10 }}>
+                    <View style={styles.top}>
 
                         <View style={{ marginTop: 10 }}>
-                            <View style={{
-                                justifyContent: "space-between"
-                                , width: "99%", paddingVertical: 10,
-                                // borderBottomWidth: 1, borderBottomColor: "#b2b2b2",
-                                marginHorizontal: 10, paddingBottom: 5
-                            }}>
+                            <View style={styles.main}>
                                 <ScrollView
                                     showsHorizontalScrollIndicator={true}
                                     showsVerticalScrollIndicator={true}
                                 >
                                     
 
-
                                     <View style={{ flexDirection: "row" }}>
-                                        <View style={{
-                                            marginBottom: 1, width: "45%", margin: 5,
-                                            borderWidth: 1, borderColor: "#f2f2f2",
-                                            borderRadius: 10, elevation: 4,
-                                            paddingVertical: 20, alignItems: "center", backgroundColor: "#fff",
-                                        }}>
+                                        <View style={styles.sub}>
 
                                             <TouchableOpacity
                                                 onPress={() => {
@@ -103,12 +92,7 @@ export default class JobLogMain extends Component {
                                             </TouchableOpacity>
                                             <Text style={{ alignSelf: "center" }}>Active Jobs</Text>
                                         </View>
-                                        <View style={{
-                                            marginBottom: 1, width: "45%", margin: 5,
-                                            borderWidth: 1, borderColor: "#f2f2f2",
-                                            borderRadius: 10, elevation: 4,
-                                            paddingVertical: 20, alignItems: "center", backgroundColor: "#fff",
-                                        }}>
+                                        <View style={styles.sub}>
 
                                             <TouchableOpacity
                                                 onPress={() => {
@@ -150,12 +134,7 @@ export default class JobLogMain extends Component {
 
 
                                     <View style={{ flexDirection: "row" }}>
-                                        <View style={{
-                                            marginBottom: 1, width: "45%", margin: 5,
-                                            borderWidth: 1, borderColor: "#f2f2f2",
-                                            borderRadius: 10, elevation: 4,
-                                            paddingVertical: 20, alignItems: "center", backgroundColor: "#fff",
-                                        }}>
+                                    <View style={styles.sub}>
 
                                             <TouchableOpacity
                                                 onPress={() => {
@@ -192,12 +171,7 @@ export default class JobLogMain extends Component {
                                             </TouchableOpacity>
                                             <Text style={{ alignSelf: "center" }}>Pervious Jobs</Text>
                                         </View>
-                                        <View style={{
-                                            marginBottom: 1, width: "45%", margin: 5,
-                                            borderWidth: 1, borderColor: "#f2f2f2",
-                                            borderRadius: 10, elevation: 4,
-                                            paddingVertical: 20, alignItems: "center", backgroundColor: "#fff",
-                                        }}>
+                                        <View style={styles.sub}>
 
                                             <TouchableOpacity
                                                 onPress={() => {
