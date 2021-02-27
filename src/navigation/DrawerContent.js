@@ -11,7 +11,7 @@ import Colors from '../utils/colors'
 import Icon from 'react-native-vector-icons/dist/SimpleLineIcons';
 
 
-import { View, Image, StyleSheet,StatusBar, Text, Switch, TouchableOpacity, Dimensions } from "react-native"
+import { View, Image, StyleSheet, StatusBar, Text, Switch, TouchableOpacity, Dimensions } from "react-native"
 const height = Dimensions.get('window').height;
 import RoutesKey from './routeskey';
 import Global from "../utils/global"
@@ -29,8 +29,8 @@ class CustomDrawerContent extends Component {
         super()
         this.state = {
             data: [],
-            Name:"",
-            Id:""
+            Name: "",
+            Id: ""
         }
     }
 
@@ -38,43 +38,106 @@ class CustomDrawerContent extends Component {
 
 
     render() {
-        const { data,Name,Id,source } = this.state
+        const { data, Name, Id, source } = this.state
 
         return (
             <DrawerContentScrollView {...this.props}>
                 <StatusBar barStyle='light-content' translucent backgroundColor='transparent' />
-                    <View style={{ height, flex: 1, padding: 10 ,backgroundColor:Colors.cyanBlue}}>
-                        {/* <DrawerItemList {...props} /> */}
-                        <View style={styles.MainContainer}>
-                            <View style={styles.RoundImage}>
-                                <Image source={require("../assets/images/ava.png")}
-                                    style={{ width: 70, height: 70, borderRadius: 150 / 2 }} />
-                            </View>
-                            <View style={styles.NameAndRole}>
-                                <Text style={[styles.Namee, { color: "#fff" }]}>DRIVER</Text>
-                                <Text style={[styles.Rolee, { color: "#fff" }]}>#12213123</Text>
-                            </View>
+                <View style={{ height, flex: 1, padding: 10, backgroundColor: Colors.yellow }}>
+                    {/* <DrawerItemList {...props} /> */}
+                    <View style={styles.MainContainer}>
+                        <View style={styles.RoundImage}>
+                            <Image source={require("../assets/images/ava.png")}
+                                style={{ width: 70, height: 70, borderRadius: 150 / 2 }} />
                         </View>
-
-                        <View style={{ flex: 0.9 }}>
-                            <TouchableOpacity onPress={() => {
-                                this.props.navigation.navigate(RoutesKey.LOGIN)
-                            }}
-                                style={styles.Link} >
-                                <Icon size={20} style={{  textAlign: 'center',
-        width: 25,
-        height: 20,
-      }} color="#fff" name="user" />
-
-                                <Text style={styles.LinkName}>Profile</Text>
-                            </TouchableOpacity>
-                         
-
+                        <View style={styles.NameAndRole}>
+                            <Text style={[styles.Namee, { color: Colors.black }]}>DRIVER</Text>
+                            <Text style={[styles.Rolee, { color: Colors.black }]}>#12213123</Text>
                         </View>
+                    </View>
+
+                    <View style={{ flex: 1 }}>
+                    <TouchableOpacity onPress={() => {
+                            this.props.navigation.navigate(RoutesKey.LOGIN)
+                        }}
+                            style={styles.Link} >
+                            <Icon size={20} style={{
+                                textAlign: 'center',
+                                width: 25,
+                                height: 20,
+                            }} color="black" name="user" />
+
+                            <Text style={styles.LinkName}>Job</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => {
+                            this.props.navigation.navigate(RoutesKey.LOGIN)
+                        }}
+                            style={styles.Link} >
+                            <Icon size={20} style={{
+                                textAlign: 'center',
+                                width: 25,
+                                height: 20,
+                            }} color="black" name="user" />
+
+                            <Text style={styles.LinkName}>FlagDown</Text>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity onPress={() => {
+                            this.props.navigation.navigate(RoutesKey.LOGIN)
+                        }}
+                            style={styles.Link} >
+                            <Icon size={20} style={{
+                                textAlign: 'center',
+                                width: 25,
+                                height: 20,
+                            }} color="black" name="user" />
+
+                            <Text style={styles.LinkName}>Message</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => {
+                            this.props.navigation.navigate(RoutesKey.LOGIN)
+                        }}
+                            style={styles.Link} >
+                            <Icon size={20} style={{
+                                textAlign: 'center',
+                                width: 25,
+                                height: 20,
+                            }} color="black" name="user" />
+
+                            <Text style={styles.LinkName}>Plots</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => {
+                            this.props.navigation.navigate(RoutesKey.LOGIN)
+                        }}
+                            style={styles.Link} >
+                            <Icon size={20} style={{
+                                textAlign: 'center',
+                                width: 25,
+                                height: 20,
+                            }} color="black" name="user" />
+
+                            <Text style={styles.LinkName}>Rider</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => {
+                            this.props.navigation.navigate(RoutesKey.LOGIN)
+                        }}
+                            style={styles.Link} >
+                            <Icon size={20} style={{
+                                textAlign: 'center',
+                                width: 25,
+                                height: 20,
+                            }} color="black" name="user" />
+
+                            <Text style={styles.LinkName}>Account Setting </Text>
+                        </TouchableOpacity>
 
                     </View>
 
-               
+                    
+
+                </View>
+
+
             </DrawerContentScrollView >
         );
     }
@@ -85,7 +148,7 @@ const styles = StyleSheet.create(
     {
         MainContainer:
         {
-           
+
             flex: 0.1,
             flexDirection: "row",
             justifyContent: 'center',
@@ -99,10 +162,10 @@ const styles = StyleSheet.create(
 
         },
         RoundImage: {
-           
+
         },
         NameAndRole: {
-           
+
             flex: 1,
             paddingHorizontal: 6
 
@@ -128,8 +191,6 @@ const styles = StyleSheet.create(
             paddingHorizontal: 10,
             fontSize: 12,
             textAlignVertical: "center"
-
-
         }
 
     });

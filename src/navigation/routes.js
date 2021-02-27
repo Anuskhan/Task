@@ -19,7 +19,8 @@ import Splash from '../screens/splash/Splash';
 import Login from "../components/Login/Login"
 import Signup from "../components/Login/Signup"
 import Home from "../components/Home/Home"
-
+import Chat from "../components/Chat/Chat" 
+import JobLogMain from "../components/Jobs/JobLogMain" 
 // import Tab, { TabTop } from "./Tab"
 
 
@@ -95,8 +96,18 @@ class StackNav extends Component {
           options={{ headerShown: false, gesturesEnabled: false, }}
         />
         <Stack.Screen
+          name={Routeskey.CHAT}
+          component={Chat}
+          options={{ headerShown: false, gesturesEnabled: false, }}
+        />
+        <Stack.Screen
           name={Routeskey.DRAWER}
           component={MyDrawer}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={Routeskey.JOBMAINLOG}
+          component={JobLogMain}
           options={{ headerShown: false }}
         />
 

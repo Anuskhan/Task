@@ -39,14 +39,14 @@ export default styles = StyleSheet.create({
         alignSelf: 'center',
         marginTop: responsiveHeight(3),
         fontWeight: '500',
-        color: Colors.darkBlue
+        color: Colors.black
     },
     h: {
         fontSize: responsiveFontSize(3),
         alignSelf: 'center',
         marginTop: responsiveHeight(8),
         fontWeight: '500',
-        color: Colors.white
+        color: Colors.black
     },
     inputView: {
         width: responsiveWidth(80),
@@ -68,14 +68,14 @@ export default styles = StyleSheet.create({
         width: responsiveWidth(80),
         height: responsiveHeight(7),
         borderRadius: responsiveWidth(2),
-        backgroundColor: Colors.cyanBlue,
+        backgroundColor: Colors.yellow,
         marginTop: responsiveHeight(3.5),
         justifyContent: 'center',
         alignItems: 'center',
     },
     buttonText: {
         fontSize: responsiveFontSize(2),
-        color: Colors.white
+        color: Colors.black
     },
     signupView: {
         alignSelf: 'center',
@@ -114,7 +114,7 @@ export default styles = StyleSheet.create({
         flex: 1,
         width: responsiveWidth(100),
         alignSelf: 'flex-start',
-        backgroundColor: Colors.cyanBlue,
+        backgroundColor: Colors.yellow,
 
 
     },

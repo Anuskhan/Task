@@ -20,6 +20,7 @@ const color = {
     lightSkyBlue: '#E4EAEF',
     red: 'red',
     gray: 'grey',
+    yellow: 'yellow',
     darkNavyBlue: '#040f28',
     whiteBlue: '#fafcfd',
     blackDarkBlue: '#152443',

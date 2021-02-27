@@ -22,8 +22,8 @@ export default class Splash extends Component {
     return (
       <ImageBackground
         style={{ flex: 1 }}
-        // resizeMode="cover"
-        source={require('../../assets/images/bg.jpg')}
+        resizeMode="cover"
+        source={{uri:'https://image.freepik.com/free-vector/taxi-graphic-design_24908-54863.jpg'}}
       >
 
 
@@ -35,7 +35,7 @@ export default class Splash extends Component {
         }}>
 
 
-          <Animatable.Image
+          {/* <Animatable.Image
             duration={600}
             animation="lightSpeedIn"
             source={require('../../assets/images/logo.png')}
@@ -46,7 +46,7 @@ export default class Splash extends Component {
               justifyContent: "center",
               resizeMode: 'contain',
             }}
-          />
+          /> */}
           <Animatable.Text animation="pulse"
             style={{ fontSize: 30, color: "#575757", fontWeight: "bold" }}
             iterationCount={5} direction="alternate">PRD DRIVER</Animatable.Text>

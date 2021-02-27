@@ -55,7 +55,7 @@ export default  Login   = props => {
                 <View style={styles.cardView}>
                     <Text style={styles.logintext}>Login</Text>
                     <View style={styles.inputView}>
-                        <FontAwesome name='user' size={20} color={Colors.cyanBlue} />
+                        <FontAwesome name='user' size={20} color={Colors.black} />
                         <TextInput
                             autoCapitalize={false}
                             autoCorrect={false}
@@ -64,12 +64,12 @@ export default  Login   = props => {
                             placeholder='example123@gmail.com'
                             onChangeText={(text) =>  setuserEmail( text )}
                         />
-                        <AntDesign name='checkcircle' size={20} color={Colors.cyanBlue} />
+                        <AntDesign name='checkcircle' size={20} color={Colors.black} />
 
 
                     </View>
                     <View style={styles.inputView}>
-                        <FontAwesome name='lock' size={20} color={Colors.cyanBlue} />
+                        <FontAwesome name='lock' size={20} color={Colors.black} />
                         <TextInput
                             autoCapitalize={false}
                             autoCorrect={false}
@@ -80,7 +80,7 @@ export default  Login   = props => {
                             onChangeText={(text) =>  setuserPassword( text )}
                         />
                         <TouchableOpacity onPress={() => setshowPassword( !showPassword )}>
-                            <Entypo name={showPassword ? 'eye-with-line' : 'eye'} size={20} color={Colors.cyanBlue} />
+                            <Entypo name={showPassword ? 'eye-with-line' : 'eye'} size={20} color={Colors.black} />
                         </TouchableOpacity>
 
 
@@ -89,7 +89,7 @@ export default  Login   = props => {
                     </View>
            
                     <TouchableOpacity
-                     onPress={() => props.navigation.navigate(Routeskey.DRAWER)}
+                     onPress={() => props.navigation.navigate(Routeskey.SIGNUP)}
                     // onPress={() => getUser()}
                      style={styles.loginButton}>
                         {loginPressed ? <ActivityIndicator size='small' color={Colors.extraDarkBlue} /> :

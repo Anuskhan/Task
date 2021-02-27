@@ -4,7 +4,8 @@ class RoutesKey {
   static SIGNUP = "SIGNUP";
   static HOME = "HOME";
   static DRAWER = "DRAWER";
-
+  static CHAT = "CHAT";
+  static JOBMAINLOG = 'JOBMAINLOG';
 }
 
 export default RoutesKey;
