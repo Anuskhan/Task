@@ -23,6 +23,7 @@ import Chat from "../components/Chat/Chat"
 import JobLogMain from "../components/Jobs/JobLogMain" 
 import AvailableJob from "../components/Jobs/AvailableJob" 
 import AvailableDetails from "../components/Jobs/AvailableDetails" 
+import Status from "../components/Status/Status" 
 // import Tab, { TabTop } from "./Tab"
 
 
@@ -120,6 +121,11 @@ class StackNav extends Component {
         <Stack.Screen
           name={Routeskey.JOBAVALIABLEDETAIL}
           component={AvailableDetails}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={Routeskey.STATUS}
+          component={Status}
           options={{ headerShown: false }}
         />
 

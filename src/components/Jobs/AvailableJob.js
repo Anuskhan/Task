@@ -43,7 +43,7 @@ class AvailableJob extends Component {
         let source = require('../../assets/images/ava.png');
         return (
             <TouchableOpacity 
-            onPress={() => this.props.navigation.navigate(Routeskey.CHAT, item)}
+            onPress={() => this.props.navigation.navigate(Routeskey.JOBAVALIABLEDETAIL)}
              activeOpacity={0.5} style={Style.listItem} >
                
                 <View style={Style.listItemDetail}>
@@ -71,7 +71,7 @@ class AvailableJob extends Component {
             <SafeAreaView  >
 
                 <View style={Style.lis}>
-                    <Text style={{ fontWeight: "bold", fontSize: 18 }}>Avaiable List</Text>
+                    <Text style={{ fontWeight: "bold", fontSize: 18 }}>Avaliable List</Text>
                 </View>
                 {data.length ? <FlatList
 
