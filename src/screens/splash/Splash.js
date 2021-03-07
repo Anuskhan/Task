@@ -12,7 +12,7 @@ export default class Splash extends Component {
     );
     data &&
       this.props.navigation.dispatch(
-        StackActions.replace(Routeskey.STATUS)
+        StackActions.replace(Routeskey.ONWAY)
       );
   }
 

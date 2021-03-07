@@ -24,6 +24,7 @@ import JobLogMain from "../components/Jobs/JobLogMain"
 import AvailableJob from "../components/Jobs/AvailableJob" 
 import AvailableDetails from "../components/Jobs/AvailableDetails" 
 import Status from "../components/Status/Status" 
+import OnWay from "../components/OnWayArrived/Onway" 
 // import Tab, { TabTop } from "./Tab"
 
 
@@ -126,6 +127,11 @@ class StackNav extends Component {
         <Stack.Screen
           name={Routeskey.STATUS}
           component={Status}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={Routeskey.ONWAY}
+          component={OnWay}
           options={{ headerShown: false }}
         />
 

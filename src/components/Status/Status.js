@@ -17,7 +17,6 @@ import Constant from "../../utils/constant"
 import RoutesKey from '../../navigation/routeskey';
 import Global from "../../utils/global"
 import {Picker} from '@react-native-community/picker';
-
 import { PieChart } from "react-native-chart-kit";
 const screenWidth = Dimensions.get("window").width;
 const chartConfig = {
@@ -93,6 +92,7 @@ class Status extends Component {
 
             <SafeAreaView style={Style.container} >
 <ScrollView>
+
                 <View style={Style.lis}>
                     <Text style={{ fontWeight: "bold", fontSize: 18 }}>Status</Text>
                 </View>
@@ -106,7 +106,7 @@ class Status extends Component {
                  >
         <Picker.Item label="Day" value="java" />
         <Picker.Item label="Week" value="js" />
-        <Picker.Item label="Month" value="js" />
+        <Picker.Item label="Month" value="Month" />
       </Picker>
                  </View>
      
@@ -129,12 +129,12 @@ class Status extends Component {
 
        <Button func={()=>{}}  color={Colors.leaveBgColor} title="Distance"/>
        <Button func={()=>{}}  color={Colors.greyShade1} title="Arived"/>
-       <Button func={()=>{}}  color={Colors.cyanBlue} title="Reached"/>
-</View>
-</View>
-</View>
-</ScrollView>
-            </SafeAreaView>
+        <Button func={()=>{}}  color={Colors.cyanBlue} title="Reached"/>
+ </View>
+ </View>
+ </View>
+ </ScrollView>
+             </SafeAreaView>
 
 
         );

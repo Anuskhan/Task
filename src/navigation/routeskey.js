@@ -9,6 +9,7 @@ class RoutesKey {
   static JOBAVALIABLE = 'JOBAVALIABLE';
   static JOBAVALIABLEDETAIL = 'JOBAVALIABLEDETAIL';
   static STATUS = 'STATUS';
+  static ONWAY = 'ONWAY';
 }
 
 export default RoutesKey;
