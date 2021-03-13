@@ -8,6 +8,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 import SwipeButton from 'rn-swipe-button-rectangular';
 import Style from './OnWayStyle';
+import Colors from '../../utils/colors'
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
 const App = () => {
@@ -24,6 +26,7 @@ const App = () => {
                     <Text style={{ fontWeight: "bold", fontSize: 18 }}>On The Way</Text>
                 </View>
       <SwipeButton 
+     
        title="Slide to confirm"
        thumbIconBackgroundColor="#FFFFFF"
        railBackgroundColor="#00cc00"
@@ -37,38 +40,134 @@ const App = () => {
       }}
        thumbIconComponent={TwitterIcon}
       enableRightToLeftSwipe={false}
-       onSwipeStart={() => alert('Swipe started!')}
+      //  onSwipeStart={() => alert('Swipe started!')}
        onSwipeSuccess={() =>
         alert('Submitted successfully!')
       }
-      onSwipeFail={() => alert('Incomplete swipe!')}
+      // onSwipeFail={() => alert('Incomplete swipe!')}
       />
      
         <View style={Style.container}>
         
       
         <View style={Style.view}>
+          {/* start */}
     <Collapse 
     onToggle={(v)=>{v==true?setActive('1'):setActive('')}}
-    style={{borderWidth:1,borderRadius:10,margin:5,padding:2,backgroundColor:'#E6E6E6'}}>
-      <CollapseHeader style={{flexDirection:'row',alignItems:'center',padding:10,}}>
-        <View style={{flex:1,flexDirection:'row',alignItems:'center',justifyContent:"space-between"}}>
-        <Text>asdasdsa11</Text>
+    style={[Style.head,{backgroundColor:Colors.darkGrey}]}>
+      <CollapseHeader style={Style.headsub}>
+        <View style={Style.f}>
+        <View style={Style.top}>
+        <Text style={Style.h}>Details</Text>
 {active=='1'?
-        <Icon name="minus" color="#3b5998" size={20} />
-      :  
-      <Icon name="plus" color="#3b5998" size={20} />
-    }
+        <Icon name="minus" color="#fff" size={20} />
+        :  
+        <Icon name="plus" color="#fff" size={20} />
+      }
 
    
         </View>
+        <View style={Style.row}>
+
+      <Text style={Style.h2}>Details : </Text>
+      <Text style={Style.h2}>Details</Text>
+        </View>
+        <View style={Style.row}>
+
+      <Text style={Style.h2}>Details : </Text>
+      <Text style={Style.h2}>Details</Text>
+        </View>
+        <View style={Style.row}>
+
+      <Text style={Style.h2}>Details : </Text>
+      <Text style={Style.h2}>Details</Text>
+        </View>
+        </View>
         
       </CollapseHeader>
-      <CollapseBody style={{alignItems:'center',justifyContent:'center',flexDirection:'row',backgroundColor:'#E6E6E6'}}>
-       
-          <Text>Profession: Boxer</Text>
+      <CollapseBody style={[Style.body,{backgroundColor:Colors.darkGrey}]}>
+        <TouchableOpacity style={Style.row}><Icon name="male" color="#fff" size={30} /><Text style={Style.h2}> 3 </Text></TouchableOpacity>
+        <TouchableOpacity style={Style.row}><Icon name="briefcase" color="#fff" size={30} /><Text style={Style.h2}> 3 </Text></TouchableOpacity>
+        <TouchableOpacity style={Style.row}><Icon name="mobile" color="#fff" size={30} /><Text style={Style.h2}> 3 </Text></TouchableOpacity>
+
       </CollapseBody>
     </Collapse>
+     {/* end */}
+          {/* start */}
+    <Collapse 
+    onToggle={(v)=>{v==true?setActive('2'):setActive('')}}
+    style={[Style.head,{backgroundColor:Colors.green}]}>
+      <CollapseHeader style={Style.headsub}>
+        <View style={Style.f}>
+        <View style={Style.top}>
+        <Text style={Style.h}>Details</Text>
+        {active=='2'? <Icon name="minus" color="#fff" size={20} />:<Icon name="plus" color="#fff" size={20} />}
+        </View>
+        <View style={Style.row}>
+
+      <Text style={Style.h2}>Name : </Text>
+      <Text style={Style.h2}>Osama</Text>
+        </View>
+        <View style={Style.row}>
+
+      <Text style={Style.h2}>Date : </Text>
+      <Text style={Style.h2}>10/10/2020</Text>
+        </View>
+        <View style={Style.row}>
+
+      <Text style={Style.h2}>Details : </Text>
+      <Text style={Style.h2}>Details</Text>
+        </View>
+        </View>
+        
+      </CollapseHeader>
+      <CollapseBody style={[Style.body,{backgroundColor:Colors.green}]}>
+       
+        <TouchableOpacity style={Style.row}><Icon name="male" color="#fff" size={30} /><Text style={Style.h2}> 3 </Text></TouchableOpacity>
+        <TouchableOpacity style={Style.row}><Icon name="briefcase" color="#fff" size={30} /><Text style={Style.h2}> 3 </Text></TouchableOpacity>
+        <TouchableOpacity style={Style.row}><Icon name="mobile" color="#fff" size={30} /><Text style={Style.h2}> 3 </Text></TouchableOpacity>
+
+      </CollapseBody>
+    </Collapse>
+     {/* end */}
+          {/* start */}
+    <Collapse 
+    onToggle={(v)=>{v==true?setActive('3'):setActive('')}}
+    style={[Style.head,{backgroundColor:Colors.orange}]}>
+      <CollapseHeader style={Style.headsub}>
+        <View style={Style.f}>
+        <View style={Style.top}>
+        <Text style={Style.h}>Details</Text>
+{active=='3'? <Icon name="minus" color="#fff" size={20} />:<Icon name="plus" color="#fff" size={20} />}
+
+   
+        </View>
+        <View style={Style.row}>
+
+      <Text style={Style.h2}>Details : </Text>
+      <Text style={Style.h2}>Details</Text>
+        </View>
+        <View style={Style.row}>
+
+      <Text style={Style.h2}>Details : </Text>
+      <Text style={Style.h2}>Details</Text>
+        </View>
+        <View style={Style.row}>
+
+      <Text style={Style.h2}>Details : </Text>
+      <Text style={Style.h2}>Details</Text>
+        </View>
+        </View>
+        
+      </CollapseHeader>
+      <CollapseBody style={[Style.body,{backgroundColor:Colors.orange}]}>
+        <TouchableOpacity style={Style.row}><Icon name="male" color="#fff" size={30} /><Text style={Style.h2}> 3 </Text></TouchableOpacity>
+        <TouchableOpacity style={Style.row}><Icon name="briefcase" color="#fff" size={30} /><Text style={Style.h2}> 3 </Text></TouchableOpacity>
+        <TouchableOpacity style={Style.row}><Icon name="mobile" color="#fff" size={30} /><Text style={Style.h2}> 3 </Text></TouchableOpacity>
+
+      </CollapseBody>
+    </Collapse>
+     {/* end */}
   </View>
         </View>
         </ScrollView>

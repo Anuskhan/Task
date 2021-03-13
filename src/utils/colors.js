@@ -35,6 +35,8 @@ const color = {
     officeBgColor: '#bb8695',
     outOfficeBgColor: '#808080',
     lightCyan: '#9adfff',
+    green: '#4BB52A',
+    orange: '#F9A20A',
   };
   
   export default color;
