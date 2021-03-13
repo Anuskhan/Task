@@ -11,7 +11,7 @@ export default styles = StyleSheet.create({
         flex: 0.2,
         width: responsiveWidth(100),
         alignSelf: 'flex-start',
-        backgroundColor: Colors.yellow,
+        // backgroundColor: Colors.yellow,
 
 
     },
@@ -22,7 +22,7 @@ export default styles = StyleSheet.create({
         fontWeight: '500',
         color: Colors.black
     },
-    main:{ flex: 0.9, marginTop: -10, backgroundColor: "#fff", borderTopRightRadius: 10, borderTopLeftRadius: 10 },
+    main:{ flex: 0.9, marginTop: -10, borderTopRightRadius: 10, borderTopLeftRadius: 10 },
     f:{ flex: 1 },
 sub:{
     justifyContent: "space-between"

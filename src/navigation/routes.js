@@ -25,6 +25,8 @@ import AvailableJob from "../components/Jobs/AvailableJob"
 import AvailableDetails from "../components/Jobs/AvailableDetails" 
 import Status from "../components/Status/Status" 
 import OnWay from "../components/OnWayArrived/Onway" 
+import Profile from "../components/Profile/Profile" 
+import Review from "../components/Review/Review" 
 // import Tab, { TabTop } from "./Tab"
 
 
@@ -134,6 +136,17 @@ class StackNav extends Component {
           component={OnWay}
           options={{ headerShown: false }}
         />
+        <Stack.Screen
+          name={Routeskey.PROFILE}
+          component={Profile}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name={Routeskey.REVIEW}
+          component={Review}
+          options={{ headerShown: false }}
+        />
+        
 
         
       </Stack.Navigator>

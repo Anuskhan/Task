@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Routeskey from "../../navigation/routeskey"
+import  TransparentHeader  from "../../utils/TransparentHeader"
 
 import Style from './JobLogMainStyle';
 import {
-    Text,
+    Text,ImageBackground,
     View, TouchableOpacity,
     SafeAreaView, Image,
     FlatList,
@@ -55,7 +56,7 @@ class AvailableJob extends Component {
                 <View style={Style.row} >
                     <Text style={Style.listItemSubText}>Drop off : Heathrow</Text>
                    
-                    <Text style={Style.red}>£ 35.00</Text>
+                    <Text style={Style.red}> £ 35.00</Text>
                 </View>
                 </View>
 
@@ -66,12 +67,17 @@ class AvailableJob extends Component {
     render() {
         const { data } = this.state
         return (
+            <ImageBackground
+            resizeMethod="scale"
+            source={require("../../assets/images/bgx.jpg")}
+            style={{ flex: 1 }}
+        > 
 <View style={Style.container}>
 
             <SafeAreaView  >
 
                 <View style={Style.lis}>
-                    <Text style={{ fontWeight: "bold", fontSize: 18 }}>Avaliable List</Text>
+                <TransparentHeader props={this.props} title={"Avaiable Jobs"} />
                 </View>
                 {data.length ? <FlatList
 
@@ -85,7 +91,7 @@ onEndThreshold={0}
             </SafeAreaView>
 </View>
 
-
+</ImageBackground>
         );
     }
 }

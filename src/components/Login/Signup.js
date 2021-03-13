@@ -1,5 +1,5 @@
 import React, { Component ,useState} from 'react';
-import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, ActivityIndicator, StatusBar, TextInput } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, ActivityIndicator, StatusBar, TextInput, ImageBackground } from 'react-native';
 import Colors from '../../utils/colors'
 import {Picker} from '@react-native-community/picker';
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
@@ -41,6 +41,10 @@ export default  Signup   = props => {
 
   
         return (
+            <ImageBackground
+            resizeMethod="scale"
+            source={require("../../assets/images/bgx.jpg")}
+            style={{ flex: 1 }}>
             <SafeAreaView style={styles.container}>
                 <StatusBar barStyle='light-content' translucent backgroundColor='transparent' />
                 <View style={styles.headerView}>
@@ -117,5 +121,6 @@ export default  Signup   = props => {
 
                 </View>
             </SafeAreaView>
+            </ImageBackground>
         );
     }

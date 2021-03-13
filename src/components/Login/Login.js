@@ -1,5 +1,5 @@
 import React, { Component ,useState} from 'react';
-import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity, ActivityIndicator, StatusBar, TextInput } from 'react-native';
+import { View, Text, StyleSheet,ImageBackground, SafeAreaView, TouchableOpacity, ActivityIndicator, StatusBar, TextInput } from 'react-native';
 import Colors from '../../utils/colors'
 import {Picker} from '@react-native-community/picker';
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
@@ -38,9 +38,16 @@ export default  Login   = props => {
             }
         }
     }
-
+   const validateEmail = email => {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+      };
   
         return (
+            <ImageBackground
+            resizeMethod="scale"
+            source={require("../../assets/images/bgx.jpg")}
+            style={{ flex: 1 }}>
             <SafeAreaView style={styles.container}>
                 <StatusBar barStyle='light-content' translucent backgroundColor='transparent' />
                 <View style={styles.headerView}>
@@ -100,5 +107,6 @@ export default  Login   = props => {
 
                 </View>
             </SafeAreaView>
+            </ImageBackground>
         );
     }

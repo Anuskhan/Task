@@ -36,6 +36,11 @@ export default class Services extends Component {
     let {loader, secure, password, email} = this.state;
 
     return (
+      <ImageBackground
+      resizeMethod="scale"
+      source={require("../../assets/images/bgx.jpg")}
+      style={{ flex: 1 }}
+  > 
       <View style={styles.f}>
         <SafeAreaView style={styles.f}>
           <View style={styles.headerView}>
@@ -189,6 +194,8 @@ export default class Services extends Component {
           </View>
         </SafeAreaView>
       </View>
+      </ImageBackground>
+      
     );
   }
 }

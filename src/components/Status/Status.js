@@ -3,7 +3,7 @@ import Routeskey from "../../navigation/routeskey"
 import Colors from '../../utils/colors'
 
 import Style from './StatusStyle';
-import {
+import {ImageBackground,
     Text,
     View, TouchableOpacity,
     SafeAreaView, Image,
@@ -12,7 +12,9 @@ import {
     ScrollView
 } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome5'
-// import Global from "../../utils/global"  
+// import Global from "../../utils/global" 
+import  TransparentHeader  from "../../utils/TransparentHeader"
+
 import Constant from "../../utils/constant"
 import RoutesKey from '../../navigation/routeskey';
 import Global from "../../utils/global"
@@ -91,11 +93,16 @@ class Status extends Component {
         return (
 
             <SafeAreaView style={Style.container} >
+                <ImageBackground
+                        resizeMethod="scale"
+                        source={require("../../assets/images/bgx.jpg")}
+                        style={{ flex: 1 }}
+                    >
 <ScrollView>
 
-                <View style={Style.lis}>
-                    <Text style={{ fontWeight: "bold", fontSize: 18 }}>Status</Text>
-                </View>
+                <TransparentHeader props={this.props} title={"Status"} />
+                {/* <View style={Style.lis}>
+                </View> */}
                 <View style={Style.sub}>
 <Text>Status</Text>
                 <Picker
@@ -134,6 +141,7 @@ class Status extends Component {
  </View>
  </View>
  </ScrollView>
+ </ImageBackground>
              </SafeAreaView>
 
 

@@ -45,7 +45,7 @@ export default styles = StyleSheet.create({
         fontSize: responsiveFontSize(3),
         alignSelf: 'center',
         marginTop: responsiveHeight(8),
-        fontWeight: '500',
+        fontWeight: 'bold',
         color: Colors.black
     },
     inputView: {
@@ -65,6 +65,8 @@ export default styles = StyleSheet.create({
     },
     loginButton: {
         alignSelf: 'center',
+        borderColor:Colors.black,
+        borderWidth:1,
         width: responsiveWidth(80),
         height: responsiveHeight(7),
         borderRadius: responsiveWidth(2),
@@ -114,7 +116,7 @@ export default styles = StyleSheet.create({
         flex: 1,
         width: responsiveWidth(100),
         alignSelf: 'flex-start',
-        backgroundColor: Colors.yellow,
+        // backgroundColor: Colors.yellow,
 
 
     },

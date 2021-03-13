@@ -15,7 +15,7 @@ const App = () => {
       <NavigationContainer>
 
 
-        <Routes initialRouteName={Routeskey.SPLASH} />
+        <Routes initialRouteName={Routeskey.HOME} />
       </NavigationContainer>
     </View>
   );

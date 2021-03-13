@@ -10,6 +10,8 @@ class RoutesKey {
   static JOBAVALIABLEDETAIL = 'JOBAVALIABLEDETAIL';
   static STATUS = 'STATUS';
   static ONWAY = 'ONWAY';
+  static PROFILE = 'Profile';
+  static REVIEW = 'REVIEW';
 }
 
 export default RoutesKey;

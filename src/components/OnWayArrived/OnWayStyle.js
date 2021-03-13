@@ -9,11 +9,12 @@ export default Style = StyleSheet.create({
     container: {
         flex: 1,
         width: responsiveWidth(100),
-        backgroundColor: Colors.yellow,
+        // backgroundColor: Colors.yellow,
 
     },
     h:{fontSize:18,fontWeight:"bold",color:'#fff'},
     h2:{fontSize:16,fontWeight:"400",color:'#fff'},
+    fh:{fontSize:20,fontWeight:"bold",color:'#fff'},
     row:{flexDirection:'row',alignItems:'center',paddingVertical:4},
     r:{
         flex:1,marginVertical:10,
@@ -38,5 +39,6 @@ view:{paddingHorizontal:10,marginTop:20,},
 color:{color:Colors.white,fontSize:17, fontWeight: 'bold'},
 sub:{flexDirection:"row",paddingHorizontal:5,flex:1,justifyContent:"space-between",alignItems:"center"},
 body:{alignItems:'center',justifyContent:'space-around',flexDirection:'row',},
+footer:{backgroundColor:Colors.cyanBlue,padding:10,marginTop:10},
 
 })

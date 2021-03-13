@@ -22,6 +22,7 @@ import {
     Share
 } from 'react-native';
 import RoutesKey from '../../navigation/routeskey';
+import  TransparentHeader  from "../../utils/TransparentHeader"
 
 export default class JobLogMain extends Component {
     constructor() {
@@ -37,12 +38,15 @@ export default class JobLogMain extends Component {
 
         return (
 
-
+            <ImageBackground
+            resizeMethod="scale"
+            source={require("../../assets/images/bgx.jpg")}
+            style={{ flex: 1 }}>
             <View style={styles.f}>
                 <SafeAreaView style={styles.f}>
                     <View style={styles.headerView}>
+                    <TransparentHeader props={this.props} title={"Jobs"} />
 
-                        <Text style={styles.h}>Jobs</Text>
                     </View>
                     <View style={styles.top}>
 
@@ -221,7 +225,7 @@ export default class JobLogMain extends Component {
 
                 </SafeAreaView>
             </View >
-
+</ImageBackground>
 
 
         );

@@ -6,7 +6,7 @@ import Style from './JobLogMainStyle';
 import {
     Text,
     View, TouchableOpacity,
-    SafeAreaView, Image,
+    SafeAreaView, Image,ImageBackground,
     FlatList,
     ActivityIndicator,
     ScrollView
@@ -16,6 +16,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome5'
 import Constant from "../../utils/constant"
 import RoutesKey from '../../navigation/routeskey';
 import Global from "../../utils/global"
+import  TransparentHeader  from "../../utils/TransparentHeader"
 
 class AvailableDetails extends Component {
     constructor(props) {
@@ -33,11 +34,15 @@ class AvailableDetails extends Component {
     render() {
         const { data } = this.state
         return (
-
+            <ImageBackground
+            resizeMethod="scale"
+            source={require("../../assets/images/bgx.jpg")}
+            style={{ flex: 1 }}
+        > 
             <SafeAreaView style={Style.container} >
 <ScrollView>
                 <View style={Style.lis}>
-                    <Text style={{ fontWeight: "bold", fontSize: 18 }}>Avaiable Details</Text>
+      <TransparentHeader props={this.props} title={"Avaiable Details"} />
                 </View>
                
                 <View style={Style.Detail}>
@@ -86,13 +91,13 @@ class AvailableDetails extends Component {
          <View style={Style.rb}>
              <TouchableOpacity style={Style.row}>
 
-         <FontAwesome name='street-view' size={20} color={Colors.black} />
-         <Text> 3 </Text>
+         <FontAwesome name='street-view' size={40} color={Colors.black} />
+         <Text  style={Style.h3}> 3 </Text>
              </TouchableOpacity>
              <TouchableOpacity style={Style.row}>
 
-         <FontAwesome name='box' size={20} color={Colors.black} />
-         <Text> 3 </Text>
+         <FontAwesome name='box' size={40} color={Colors.black} />
+         <Text style={Style.h3}> 3 </Text>
              </TouchableOpacity>
           
              </View>
@@ -101,7 +106,7 @@ class AvailableDetails extends Component {
 
 </ScrollView>
             </SafeAreaView>
-
+</ImageBackground>
 
         );
     }
