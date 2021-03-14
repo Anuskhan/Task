@@ -35,6 +35,11 @@ export default class Stylelist extends Component {
 
   render() {
     return (
+      <ImageBackground
+      resizeMethod="scale"
+      source={require("../../assets/images/bgx.jpg")}
+      style={{ flex: 1 }}
+  >
       <View style={SettingStyle.View}>
  <TransparentHeader props={this.props} title={"Review"} />
          {[1,2,3,4].map(()=>(
@@ -92,6 +97,7 @@ export default class Stylelist extends Component {
 
         
       </View>
+      </ImageBackground>
     );
   }
 }

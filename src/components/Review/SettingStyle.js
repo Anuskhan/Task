@@ -9,7 +9,6 @@ export default SettingStyle = StyleSheet.create({
 dollarTop:{alignSelf:"center"},
   View: {
     flex: 1,
-    backgroundColor: "#f0f0f0"
   },
   H1: {
     color: "#000",
